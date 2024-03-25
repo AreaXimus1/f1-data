@@ -1,0 +1,361 @@
+{
+    "teams": [
+        "Ferrari", "Red Bull Racing", "Mercedes", "McLaren", "RB", "Aston Martin", "Kick Sauber", "Haas F1 Team", "Williams", "Alpine"
+    ],
+    
+    "team_colours": {
+        "Ferrari": "#DC0000", 
+        "Red Bull Racing": "#3671C6",
+        "Mercedes": "#27F4D2",
+        "McLaren": "#FF8000",
+        "RB": "#3671C6",
+        "Aston Martin": "#229971", 
+        "Kick Sauber": "#52D252",
+        "Haas F1 Team": "#B6BABD",
+        "Williams": "#64C4FF",
+        "Alpine": "#FF87BC"
+    },
+
+    "tyre_colours": {
+        "soft": "#E30E23",
+        "medium": "#F2CA1F",
+        "hard": "#E7E5E3",
+        "inters": "#07A53C",
+        "wets": "#3C65AB"
+    },
+
+    "drivers": {
+        "VER": {
+            "Team": "Red Bull Racing",
+            "Full Name": "Max Verstappen",
+            "Surname": "Verstappen"
+        },
+        "PER": {
+            "Team": "Red Bull Racing",
+            "Full Name": "Sergio Perez",
+            "Surname": "Perez"
+        },
+        "LEC": {
+            "Team": "Ferrari",
+            "Full Name": "Charles Leclerc",
+            "Surname": "Leclerc"
+        },
+        "SAI": {
+            "Team": "Ferrari",
+            "Full Name": "Carlos Sainz",
+            "Surname": "Sainz"
+        },
+        "HAM": {
+            "Team": "Mercedes",
+            "Full Name": "Lewis Hamilton",
+            "Surname": "Hamilton"
+        },
+        "RUS": {
+            "Team": "Mercedes",
+            "Full Name": "George Russell",
+            "Surname": "Russell"
+        },
+        "NOR": {
+            "Team": "McLaren",
+            "Full Name": "Lando Norris", 
+            "Surname": "Norris"
+        },
+        "PIA": {
+            "Team": "McLaren",
+            "Full Name": "Oscar Piastri", 
+            "Surname": "Piastri"
+        },
+        "RIC": {
+            "Team": "RB",
+            "Full Name": "Daniel Ricciardo", 
+            "Surname": "Ricciardo"
+        },
+        "TSU": {
+            "Team": "RB",
+            "Full Name": "Yuki Tsunoda", 
+            "Surname": "Tsunoda"
+        },
+        "ALO": {
+            "Team": "Aston Martin",
+            "Full Name": "Fernando Alonso", 
+            "Surname": "Alonso"
+        },
+        "STR": {
+            "Team": "Aston Martin",
+            "Full Name": "Lance Stroll", 
+            "Surname": "Stroll"
+        },
+        "BOT": {
+            "Team": "Kick Sauber",
+            "Full Name": "Valterri Bottas", 
+            "Surname": "Bottas"
+        },
+        "ZHO": {
+            "Team": "Kick Sauber",
+            "Full Name": "Zhou Guanyu", 
+            "Surname": "Zhou"
+        },
+        "MAG": {
+            "Team": "Haas F1 Team",
+            "Full Name": "Kevin Magnussen", 
+            "Surname": "Magnussen"
+        },
+        "HUL": {
+            "Team": "Haas F1 Team",
+            "Full Name": "Nico Hulkenberg", 
+            "Surname": "Hulkenberg"
+        },
+        "ALB": {
+            "Team": "Williams",
+            "Full Name": "Alex Albon", 
+            "Surname": "Albon"
+        },
+        "SAR": {
+            "Team": "Williams",
+            "Full Name": "Logan Sargeant", 
+            "Surname": "Sargeant"
+        },
+        "OCO": {
+            "Team": "Alpine",
+            "Full Name": "Esteban Ocon", 
+            "Surname": "Ocon"
+        },
+        "GAS": {
+            "Team": "Alpine",
+            "Full Name": "Pierre Gasly", 
+            "Surname": "Gasly"
+        },
+        "BEA": {
+            "Team": "Ferrari",
+            "Full Name": "Oliver Bearman",
+            "Surname": "Bearman"
+        }
+
+    },
+
+    "races": {
+        "Bahrain": {
+            "Round": 1,
+            "Official name": "Gulf Air Bahrain Grand Prix",
+            "Track": "Bahrain International Circuit",
+            "Date": "02/03/2024",
+            "Time": "1500",
+            "Sprint": false,
+            "Laps": 57
+        },
+        "Saudi Arabia": {
+            "Round": 2,
+            "Official name": "STC Saudi Arabian Grand Prix",
+            "Track": "Jeddah Corniche Circuit",
+            "Date": "09/03/2024",
+            "Time": "1700",
+            "Sprint": false,
+            "Laps": 50
+        },
+        "Australia": {
+            "Round": 3,
+            "Official name": "Rolex Australian Grand Prix",
+            "Track": "Melbourne Grand Prix Circuit",
+            "Date": "24/03/2024",
+            "Time": "0400",
+            "Sprint": false,
+            "Laps": 58
+        },
+        "Japan": {
+            "Round": 4,
+            "Official name": "MSC Cruises Japanese Grand Prix",
+            "Track": "Suzuka Circuit", 
+            "Date": "07/04/2024",
+            "Time": "0600",
+            "Sprint": false,
+            "Laps": 53
+        },
+        "China": {
+            "Round": 5,
+            "Official name": "Lenovo Chinese Grand Prix",
+            "Track": "Shanghai International Circuit",
+            "Date": "21/04/2024",
+            "Time": "0800",
+            "Sprint": true,
+            "Laps": 56,
+            "Sprint Laps": 19
+        },
+        "Miami": {
+            "Round": 6,
+            "Official name": "Crypto.com Miami Grand Prix",
+            "Track": "Miami International Autodrome",
+            "Date": "05/05/2024",
+            "Time": "2100",
+            "Sprint": true,
+            "Laps": 57,
+            "Sprint Laps": 19
+        },
+        "Emilia-Romagna": {
+            "Round": 7,
+            "Official name": "MSC Cruises Gran Premio Dell'Emilia-Romagna",
+            "Track": "Autodromo Enzo e Dino Ferrari",
+            "Date": "19/05/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 63
+        },
+        "Monaco": {
+            "Round": 8,
+            "Official name": "Grand Prix de Monaco",
+            "Track": "Circuit de Monaco",
+            "Date": "26/05/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 78
+        },
+        "Canada": {
+            "Round": 9,
+            "Official name": "AWS Grand Prix Du Canada",
+            "Track": "Circuit Gilles Villeneuve",
+            "Date": "09/06/2024",
+            "Time": "1900",
+            "Sprint": false,
+            "Laps": 70
+        },
+        "Spain": {
+            "Round": 10,
+            "Official name": "Aramco Gran Premio de España",
+            "Track": "Circuit de Barcelona-Catalunya",
+            "Date": "23/06/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 66
+        },
+        "Austria": {
+            "Round": 11,
+            "Official name": "Qatar Airways Austrian Grand Prix",
+            "Track": "Red Bull Ring",
+            "Date": "30/06/2024",
+            "Time": "1400",
+            "Sprint": true,
+            "Laps": 71,
+            "Sprint Laps": 24
+        },
+        "Great Britain": {
+            "Round": 12,
+            "Official name": "Qatar Airways British Grand Prix",
+            "Track": "Silverstone Circuit",
+            "Date": "07/07/2024",
+            "Time": "1500",
+            "Sprint": false,
+            "Laps": 52
+        },
+        "Hungary": {
+            "Round": 13,
+            "Official name": "Hungarian Grand Prix",
+            "Track": "Hungaroring",
+            "Date": "21/07/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 70
+        },
+        "Belgium": {
+            "Round": 14,
+            "Official name": "Rolex Belgian Grand Prix",
+            "Track": "Spa-Francorchamps",
+            "Date": "28/07/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 44
+        },
+        "Netherlands": {
+            "Round": 15,
+            "Official name": "Heineken Dutch Grand Prix",
+            "Track": "Circuit Zandvoort",
+            "Date": "25/08/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 72
+        },
+        "Italy": {
+            "Round": 16,
+            "Official name": "Pirelli Gran Premio D'Italia",
+            "Track": "Autodromo Nazionale Monza",
+            "Date": "01/09/2024",
+            "Time": "1400",
+            "Sprint": false,
+            "Laps": 53
+        },
+        "Azerbaijan": {
+            "Round": 17,
+            "Official name": "Qatar Airways Azerbaijan Grand Prix",
+            "Track": "Baku City Circuit",
+            "Date": "15/09/2024",
+            "Time": "1200",
+            "Sprint": false,
+            "Laps": 51
+        },
+        "Singapore": {
+            "Round": 18,
+            "Official name": "Singapore Airlines Singapore Grand Prix",
+            "Track": "Marina Bay Street Circuit",
+            "Date": "22/09/2024",
+            "Time": "1300",
+            "Sprint": false,
+            "Laps": 62
+        },
+        "United States": {
+            "Round": 19,
+            "Official name": "Pirelli United States Grand Prix",
+            "Track": "Circuit of the Americas",
+            "Date": "20/10/2024",
+            "Time": "2000",
+            "Sprint": true,
+            "Laps": 56,
+            "Sprint Laps": 19
+        },
+        "Mexico": {
+            "Round": 20,
+            "Official name": "Gran Premio de la Ciudad de México",
+            "Track": "Autodromo Hermanos Rodríguez",
+            "Date": "27/10/2024",
+            "Time": "2000",
+            "Sprint": false,
+            "Laps": 71
+        },
+        "Brazil": {
+            "Round": 21,
+            "Official name": "Lenovo Grande Prêmio de São Paulo",
+            "Track": "Autódromo José Carlos Pace",
+            "Date": "03/11/2024",
+            "Time": "1700",
+            "Sprint": true,
+            "Laps": 71,
+            "Sprint Laps": 24
+        },
+        "Las Vegas": {
+            "Round": 22,
+            "Official name": "Heineken Silver Las Vegas Grand Prix",
+            "Track": "Las Vegas Street Circuit",
+            "Date": "24/11/2024",
+            "Time": "0600",
+            "Sprint": false,
+            "Laps": 50
+        },
+        "Qatar": {
+            "Round": 23,
+            "Official name": "Qatar Airways Qatar Grand Prix",
+            "Track": "Losail Circuit",
+            "Date": "01/12/2024",
+            "Time": "1700",
+            "Sprint": true,
+            "Laps": 57,
+            "Sprint Laps": 19
+        },
+        "Abu Dhabi": {
+            "Round": 24,
+            "Official name": "Etihad Airways Abu Dhabi Grand Prix",
+            "Track": "Yas Marina Circuit",
+            "Date": "08/12/2024",
+            "Time": "1300",
+            "Sprint": false,
+            "Laps": 58
+        }
+
+    }
+}
