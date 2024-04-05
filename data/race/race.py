@@ -612,7 +612,16 @@ def position_changes(data):
 '''
 
 
-def corner_trace(data, driver_info, corner=None, zoom: int = 10):
+def corner_trace(data, driver_info: List[Dict[str, Any]], corner: int = None, zoom: int = 10):
+    '''
+    Creates a trace of the track, also giving you the ability to zoom in on any corner. Need to provide driver info.
+    Mostly useless, as I thought it gave the line a driver drove, whereas it's actually just a pre-scripted series of X/Y coords.
+
+    driver_info = [
+        {"driver": str, "lap": int},
+    ]
+    '''
+
     axis_fontsize = 20
 
     LAPS = data.laps

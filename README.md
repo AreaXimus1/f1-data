@@ -99,6 +99,27 @@ Takes `DATA` from FastF1.
 
 <br>
 
+#### `corner_trace(data, driver_info, corner = None, zoom 10)`
+
+Creates a trace of the track, also giving you the ability to zoom in on any corner. Need to provide driver info.
+
+Mostly useless, as I thought it gave the line a driver drove, whereas it's actually just a pre-scripted series of X/Y coords.
+
+##### Parameters
+- `data = DATA` from FastF1.
+- `driver_info` is a list of dictionaries containing info for the drivers you want on the graph. Completely superfluous, as drivers "drive" on a pre-scripted line (i.e. no intra-driver variation).
+	```
+	driver_info = [
+		{"driver": str, "lap": int},
+	]
+	```
+	`driver` is the three-letter abbreviation of the driver's name (e.g. VER), "lap" is the integer lap you want to look at.
+- `corner` Optional. None by default (for whole track view). If you want to zoom in on a corner, give the corner number as an integer.
+- `zoom` Optional. If a corner is specified, will by default zoom in by 10 times on that corner if unspecified. If you give it a different integer, will use that zoom level instead. If `corner` is unspecified, will do nothing. 
+
+<br>
+<br>
+
 ### `qualifying.py`
 #### `compare_telemetry(data, driver1, driver2)`
 Compares the qualifying telemetry for two drivers. X axis is the distance into the lap, with three Y axes: speed, throttle %, and delta to the first provided driver. 
