@@ -1,0 +1,99 @@
+,Race number,Race name,Team,Driver,Pit stop time,Lap
+0,1,Bahrain,Ferrari,Leclerc,2.23,11
+1,1,Bahrain,Ferrari,Sainz,2.27,35
+2,1,Bahrain,Red Bull,Verstappen,2.27,37
+3,1,Bahrain,Red Bull,Perez,2.29,12
+4,1,Bahrain,McLaren,Norris,2.33,13
+5,1,Bahrain,RB,Tsunoda,2.34,34
+6,1,Bahrain,Ferrari,Leclerc,2.37,34
+7,1,Bahrain,Mercedes,Hamilton,2.51,33
+8,1,Bahrain,RB,Tsunoda,2.51,14
+9,1,Bahrain,Haas,Magnussen,2.56,32
+10,1,Bahrain,Aston Martin,Stroll,2.57,9
+11,1,Bahrain,Ferrari,Sainz,2.6,14
+12,1,Bahrain,Alpine,Ocon,2.64,10
+13,1,Bahrain,RB,Ricciardo,2.73,35
+14,1,Bahrain,Haas,Hulkenberg,2.74,41
+15,1,Bahrain,Red Bull,Perez,2.76,36
+16,1,Bahrain,Sauber,Zhou,2.77,28
+17,1,Bahrain,Haas,Hulkenberg,2.79,20
+18,1,Bahrain,Mercedes,Russell,2.81,11
+19,1,Bahrain,RB,Ricciardo,2.83,13
+20,1,Bahrain,Williams,Albon,2.84,36
+21,1,Bahrain,Aston Martin,Stroll,2.85,27
+22,1,Bahrain,McLaren,Norris,2.94,33
+23,1,Bahrain,Mercedes,Russell,2.94,31
+24,1,Bahrain,Red Bull,Verstappen,2.97,17
+25,1,Bahrain,Williams,Albon,3.01,15
+26,1,Bahrain,Alpine,Ocon,3.01,30
+27,1,Bahrain,Sauber,Zhou,3.03,9
+28,1,Bahrain,Aston Martin,Alonso,3.14,15
+29,1,Bahrain,Williams,Sargeant,3.15,28
+30,1,Bahrain,McLaren,Piastri,3.2,34
+31,1,Bahrain,Aston Martin,Alonso,3.26,41
+32,1,Bahrain,Mercedes,Hamilton,3.4,12
+33,1,Bahrain,Alpine,Gasly,3.42,43
+34,1,Bahrain,Williams,Sargeant,3.45,40
+35,1,Bahrain,McLaren,Piastri,3.57,12
+36,1,Bahrain,Haas,Magnussen,3.88,11
+37,1,Bahrain,Sauber,Bottas,4.3,12
+38,1,Bahrain,Alpine,Gasly,4.37,31
+39,1,Bahrain,Alpine,Gasly,8.03,12
+40,1,Bahrain,Williams,Sargeant,13.54,10
+41,1,Bahrain,Haas,Hulkenberg,14.35,1
+42,1,Bahrain,Sauber,Bottas,52.44,30
+0,2,Saudi,Red Bull,Verstappen,2.44,7
+1,2,Saudi,Mercedes,Hamilton,2.51,36
+2,2,Saudi,Red Bull,Perez,2.7,7
+3,2,Saudi,Aston Martin,Alonso,2.74,7
+4,2,Saudi,Mercedes,Russell,2.97,7
+5,2,Saudi,Haas,Hulkenberg,3.03,33
+6,2,Saudi,McLaren,Piastri,3.28,7
+7,2,Saudi,Haas,Magnussen,3.29,7
+8,2,Saudi,Ferrari,Bearman,3.48,7
+9,2,Saudi,RB,Tsunoda,3.59,7
+10,2,Saudi,Sauber,Bottas,3.62,35
+11,2,Saudi,Williams,Albon,3.66,7
+12,2,Saudi,McLaren,Norris,4.04,37
+13,2,Saudi,Alpine,Ocon,4.05,7
+14,2,Saudi,Sauber,Bottas,5.14,7
+15,2,Saudi,Ferrari,Leclerc,5.31,7
+16,2,Saudi,Williams,Sargeant,5.36,7
+17,2,Saudi,Sauber,Zhou,28.71,41
+18,2,Saudi,RB,Ricciardo,41.61,7
+0,3,Australia,Red Bull,Perez,2.1,35
+1,3,Australia,Ferrari,Leclerc,2.18,34
+2,3,Australia,Ferrari,Leclerc,2.2,9
+3,3,Australia,Alpine,Ocon,2.43,42
+4,3,Australia,Mercedes,Hamilton,2.46,7
+5,3,Australia,RB,Tsunoda,2.47,36
+6,3,Australia,McLaren,Piastri,2.49,9
+7,3,Australia,Mercedes,Russell,2.51,45
+8,3,Australia,Williams,Albon,2.54,6
+9,3,Australia,Alpine,Gasly,2.58,41
+10,3,Australia,Mercedes,Russell,2.59,8
+11,3,Australia,Ferrari,Sainz,2.61,16
+12,3,Australia,McLaren,Norris,2.63,14
+13,3,Australia,McLaren,Norris,2.63,40
+14,3,Australia,Aston Martin,Stroll,2.65,8
+15,3,Australia,Aston Martin,Alonso,2.66,41
+16,3,Australia,Ferrari,Sainz,2.67,41
+17,3,Australia,RB,Ricciardo,2.67,29
+18,3,Australia,Williams,Albon,2.75,27
+19,3,Australia,Haas,Hulkenberg,2.82,35
+20,3,Australia,Aston Martin,Alonso,2.83,17
+21,3,Australia,Aston Martin,Stroll,2.87,37
+22,3,Australia,Alpine,Ocon,2.88,9
+23,3,Australia,Red Bull,Perez,2.88,14
+24,3,Australia,RB,Ricciardo,2.88,5
+25,3,Australia,Haas,Hulkenberg,3.0,17
+26,3,Australia,Haas,Magnussen,3.04,7
+27,3,Australia,Haas,Magnussen,3.05,33
+28,3,Australia,RB,Tsunoda,3.37,9
+29,3,Australia,Sauber,Zhou,3.4,6
+30,3,Australia,McLaren,Piastri,3.51,39
+31,3,Australia,Sauber,Bottas,3.63,36
+32,3,Australia,Alpine,Gasly,5.04,17
+33,3,Australia,Alpine,Ocon,14.71,16
+34,3,Australia,Sauber,Zhou,20.2,35
+35,3,Australia,Sauber,Bottas,31.18,8
