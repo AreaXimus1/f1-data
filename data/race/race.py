@@ -86,6 +86,7 @@ def initial_setup(data, safety_car_laps=None):
 
 
 def lap_scatter(data, grand_prix, sc_laps: List[Tuple[int, int]], drivers_in_graph: List[str], ylim: Tuple[float, float] = None):
+    '''Produces a scatter of lap times over the course of a race for drivers provided.'''
 
     all_laps_by_team = initial_setup(data)["team_laps"]
 
@@ -224,7 +225,7 @@ def lap_scatter(data, grand_prix, sc_laps: List[Tuple[int, int]], drivers_in_gra
         text.set_color("white")
 
     # TITLE
-    title = f"{grand_prix} Race Pace\n"
+    title = f"{data.event.year} {data.event["EventName"]} Race Pace\n"
     for driver in drivers_in_graph:
         title = title + f"{drivers[driver]["Full Name"]}, "
     title = title[:-2]

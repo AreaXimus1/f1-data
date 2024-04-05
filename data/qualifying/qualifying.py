@@ -46,32 +46,6 @@ font = font_manager.FontProperties(
     family="Formula1", weight="normal", style="normal", size=16)
 
 
-def initial_setup(data, safety_car_laps=None):
-    '''Takes a string list format for safety car beginning/end and converts it to a list of tuples'''
-
-    return_data = dict()
-
-    if safety_car_laps is not None:
-        sc_laps = list()
-
-        for sc in safety_car_laps:
-            laps = sc.split("-")
-            start_lap = int(laps[0])
-            end_lap = int(laps[1])
-            sc_laps.append((start_lap, end_lap))
-
-        return_data["safety_car"] = sc_laps
-
-    LAPS = data.laps
-    all_laps_by_team = dict()
-    for team1 in teams:
-        team_data = LAPS[LAPS["Team"] == team1]
-        all_laps_by_team[team1] = team_data.reset_index()
-    return_data["team_laps"] = all_laps_by_team
-
-    return return_data
-
-
 def compare_telemetry(data, driver1, driver2):
     '''Takes two drivers and compares their fastest qualifying laps'''
 
