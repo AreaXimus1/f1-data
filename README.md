@@ -129,6 +129,9 @@ Mostly useless, as I thought it gave the line a driver drove, whereas it's actua
 
 ## `qualifying.py`
 ### `compare_telemetry(data, driver_info, vlines] = None, xlim = None, delta_ylim = None)`
+
+N.B.: the main change from the compare_telemetry() function in race.py is that in driver_info "lap" is now "session", requiring q1/q2/q3.
+
 Compares the qualifying telemetry of any number of drivers you choose. X axis is the distance into the lap, with three Y axes: speed, throttle %, and delta to the first provided driver. 
 
 #### Parameters
@@ -142,7 +145,7 @@ Compares the qualifying telemetry of any number of drivers you choose. X axis is
 	}]
 	```
 	- `driver` is the three letter acronym if the driver
-	- `session` is which qualifying session from which that driver's fastest lap comes.
+	- `session` is which qualifying session from which that driver's fastest lap comes. Acceptable inputs: q1/q2/q3 (or upper case).
 	- `colour` is an *optional* override for the colour the driver will be, of any format Matplotlib takes (e.g. word, hex).
 - `vlines` Optional. Puts two vertical lines on all charts,  highlighting an area, with a string equidistant between them. Is a list of dictionaries of any block you wish to put vlines over. 
 	```
@@ -160,12 +163,12 @@ Compares the qualifying telemetry of any number of drivers you choose. X axis is
 - `xlim` Optional. A tuple of two integers, to change the x limit of the graph. E.g. (1000, 1500) would only show the telemetry from the 500 metres between 1km into the lap and 1.5km into the lap.
 - `delta_ylim` Optional. A tuple of two floats. If you wish to constrain the Delta chart between two values. 
 
+<br>
+
 ### `compare_telemetry_different_years(driver_info, vlines = None, xlim = None, delta_ylim = None)`
 Compares the qualifying telemetry of any number of drivers you choose -- from different years (or tracks if you so choose, though of limited use).
 
 X axis is the distance into the lap, with three Y axes: speed, throttle %, and delta to the first provided driver. 
-
-<br>
 
 #### Parameters
 N.B.: unlike every other function, this *does not* take DATA from fastf1 as an initial parameter. Instead, it is passed in in `driver_info`.
