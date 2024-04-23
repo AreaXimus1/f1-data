@@ -139,7 +139,7 @@ def compare_telemetry(data, driver_info: List[Dict[str, Any]], vlines: List[Dict
     EXAMPLES:
     driver_info = [{
         "driver": "HAM",
-        "session": 56,
+        "session": Q3,
         "colour": "red" (opt.)
     }]
 

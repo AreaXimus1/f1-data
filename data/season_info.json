@@ -8,7 +8,7 @@
         "Red Bull Racing": "#3671C6",
         "Mercedes": "#27F4D2",
         "McLaren": "#FF8000",
-        "RB": "#3671C6",
+        "RB": "#587B98",
         "Aston Martin": "#229971", 
         "Kick Sauber": "#52D252",
         "Haas F1 Team": "#B6BABD",
@@ -28,107 +28,128 @@
         "VER": {
             "Team": "Red Bull Racing",
             "Full Name": "Max Verstappen",
-            "Surname": "Verstappen"
+            "Surname": "Verstappen",
+            "Colour": "#3671C6"
         },
         "PER": {
             "Team": "Red Bull Racing",
             "Full Name": "Sergio Perez",
-            "Surname": "Perez"
+            "Surname": "Perez",
+            "Colour": "#3671C6"
         },
         "LEC": {
             "Team": "Ferrari",
             "Full Name": "Charles Leclerc",
-            "Surname": "Leclerc"
+            "Surname": "Leclerc",
+            "Colour": "#DC0000"
         },
         "SAI": {
             "Team": "Ferrari",
             "Full Name": "Carlos Sainz",
-            "Surname": "Sainz"
+            "Surname": "Sainz",
+            "Colour": "#DC0000"
         },
         "HAM": {
             "Team": "Mercedes",
             "Full Name": "Lewis Hamilton",
-            "Surname": "Hamilton"
+            "Surname": "Hamilton",
+            "Colour": "#27F4D2"
         },
         "RUS": {
             "Team": "Mercedes",
             "Full Name": "George Russell",
-            "Surname": "Russell"
+            "Surname": "Russell",
+            "Colour": "#27F4D2"
         },
         "NOR": {
             "Team": "McLaren",
             "Full Name": "Lando Norris", 
-            "Surname": "Norris"
+            "Surname": "Norris",
+            "Colour": "#FF8000"
         },
         "PIA": {
             "Team": "McLaren",
             "Full Name": "Oscar Piastri", 
-            "Surname": "Piastri"
+            "Surname": "Piastri",
+            "Colour": "#FF8000"
         },
         "RIC": {
             "Team": "RB",
             "Full Name": "Daniel Ricciardo", 
-            "Surname": "Ricciardo"
+            "Surname": "Ricciardo",
+            "Colour": "#587B98"
         },
         "TSU": {
             "Team": "RB",
             "Full Name": "Yuki Tsunoda", 
-            "Surname": "Tsunoda"
+            "Surname": "Tsunoda",
+            "Colour": "#587B98"
         },
         "ALO": {
             "Team": "Aston Martin",
             "Full Name": "Fernando Alonso", 
-            "Surname": "Alonso"
+            "Surname": "Alonso",
+            "Colour": "#229971"
         },
         "STR": {
             "Team": "Aston Martin",
             "Full Name": "Lance Stroll", 
-            "Surname": "Stroll"
+            "Surname": "Stroll",
+            "Colour": "#229971"
         },
         "BOT": {
             "Team": "Kick Sauber",
             "Full Name": "Valterri Bottas", 
-            "Surname": "Bottas"
+            "Surname": "Bottas",
+            "Colour": "#52D252"
         },
         "ZHO": {
             "Team": "Kick Sauber",
             "Full Name": "Zhou Guanyu", 
-            "Surname": "Zhou"
+            "Surname": "Zhou",
+            "Colour": "#52D252"
         },
         "MAG": {
             "Team": "Haas F1 Team",
             "Full Name": "Kevin Magnussen", 
-            "Surname": "Magnussen"
+            "Surname": "Magnussen",
+            "Colour": "#B6BABD"
         },
         "HUL": {
             "Team": "Haas F1 Team",
             "Full Name": "Nico Hulkenberg", 
-            "Surname": "Hulkenberg"
+            "Surname": "Hulkenberg",
+            "Colour": "#B6BABD"
         },
         "ALB": {
             "Team": "Williams",
             "Full Name": "Alex Albon", 
-            "Surname": "Albon"
+            "Surname": "Albon",
+            "Colour": "#64C4FF"
         },
         "SAR": {
             "Team": "Williams",
             "Full Name": "Logan Sargeant", 
-            "Surname": "Sargeant"
+            "Surname": "Sargeant",
+            "Colour": "#64C4FF"
         },
         "OCO": {
             "Team": "Alpine",
             "Full Name": "Esteban Ocon", 
-            "Surname": "Ocon"
+            "Surname": "Ocon",
+            "Colour": "#FF87BC"
         },
         "GAS": {
             "Team": "Alpine",
             "Full Name": "Pierre Gasly", 
-            "Surname": "Gasly"
+            "Surname": "Gasly",
+            "Colour": "#FF87BC"
         },
         "BEA": {
             "Team": "Ferrari",
             "Full Name": "Oliver Bearman",
-            "Surname": "Bearman"
+            "Surname": "Bearman",
+            "Colour": "#DC0000"
         }
 
     },
@@ -141,7 +162,8 @@
             "Date": "02/03/2024",
             "Time": "1500",
             "Sprint": false,
-            "Laps": 57
+            "Laps": 57,
+            "SpeedTrapBetween": [0, 710]
         },
         "Saudi Arabia": {
             "Round": 2,
@@ -150,7 +172,8 @@
             "Date": "09/03/2024",
             "Time": "1700",
             "Sprint": false,
-            "Laps": 50
+            "Laps": 50,
+            "SpeedTrapBetween": [5112, 5497]
         },
         "Australia": {
             "Round": 3,
@@ -159,7 +182,8 @@
             "Date": "24/03/2024",
             "Time": "0400",
             "Sprint": false,
-            "Laps": 58
+            "Laps": 58,
+            "SpeedTrapBetween": [0, 343]
         },
         "Japan": {
             "Round": 4,
@@ -168,7 +192,8 @@
             "Date": "07/04/2024",
             "Time": "0600",
             "Sprint": false,
-            "Laps": 53
+            "Laps": 53,
+            "SpeedTrapBetween": [4958, 5342]
         },
         "China": {
             "Round": 5,
@@ -178,7 +203,8 @@
             "Time": "0800",
             "Sprint": true,
             "Laps": 56,
-            "Sprint Laps": 19
+            "Sprint Laps": 19,
+            "SpeedTrapBetween": [4000, 4708]
         },
         "Miami": {
             "Round": 6,
@@ -357,5 +383,39 @@
             "Laps": 58
         }
 
+    },
+
+    "variables": {
+        "LapTime": {
+            "Title": "Lap Time",
+            "Axis": "Lap Time"
+        },
+        "ThrottleAvg": {
+            "Title": "Average Throttle Percentage",
+            "Axis": "Avg. Throttle %",
+            "FastF1Name": "Throttle"
+        },
+        "LapNumber": {
+            "Title": "Lap Number",
+            "Axis": "Lap Number"
+        },
+        "SpeedST": {
+            "Title": "Speed Trap Speed",
+            "Axis": "Speed Trap [km/h]"
+        },
+        "Stint": {
+            "Title": "Stint Number", 
+            "Axis": "Stint"
+        },
+        "RPMAvg": {
+            "Title": "Average RPM",
+            "Axis": "Average RPM",
+            "FastF1Name": "RPM"
+        },
+        "GearAvg": {
+            "Title": "Average Gear",
+            "Axis": "Average Gear",
+            "FastF1Name": "nGear"
+        }
     }
 }

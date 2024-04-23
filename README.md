@@ -16,6 +16,7 @@ The final thing inside data/ is `season_info.json` which contains five items.
 - `tyre_colours` is a dictionary. The key is the tyre name (both dries and wets) in lower case, the value is a hex code for the tyre colours. 
 - `drivers` is a dictionary with sub-dictionaries. The key is each driver's three letter initials (e.g. VER), the value is a sub-dictionary. In that subdictionary there are three keys, Team, Full Name, and Surname, whose contents should be self-explanatory.
 - `races` is a dictionary with sub-dictionaries. The key is the race name (e.g. China, Emilia-Romagna), the value is a dictionary. There are 8 keys: Round (int), Official name (str), Track (str), Date (str, DD/MM/YYYY), Time (str), Sprint (Bool), Laps (int), and Sprint Laps (int, if Sprint=False, will not exist).
+- `variables` is a dictionary with sub-dictionaries. The key is the fastf1 variable name (e.g. SpeedST), the value is another dictionary. In that dictionary there are two keys, "Title" and "Axis", which explains the variable name. E.g. `SpeedST: {"Title": "Speed Trap Speed", "Axis": "Speed Trap [km/h]"}`. Some graphs use these to properly title charts and their axes.
 
 
 ### 00_Example/
@@ -106,23 +107,120 @@ Takes `DATA` from FastF1.
 
 <br>
 
-### `corner_trace(data, driver_info, corner = None, zoom 10)`
-
-Creates a trace of the track, also giving you the ability to zoom in on any corner. Need to provide driver info.
-
-Mostly useless, as I thought it gave the line a driver drove, whereas it's actually just a pre-scripted series of X/Y coords.
+### `speed_trap_distribution(data, starters=20, ylim=None, include_drs=True)`
+Gives a violin plot of the distribution of driver's speeds through the speed trap on track. Provides one violin plot per driver. 
 
 #### Parameters
-- `data = DATA` from FastF1.
-- `driver_info` is a list of dictionaries containing info for the drivers you want on the graph. Completely superfluous, as drivers "drive" on a pre-scripted line (i.e. no intra-driver variation).
-	```
-	driver_info = [
-		{"driver": str, "lap": int},
-	]
-	```
-	- `driver` is the three-letter abbreviation of the driver's name (e.g. VER), "lap" is the integer lap you want to look at.
-- `corner` Optional. None by default (for whole track view). If you want to zoom in on a corner, give the corner number as an integer.
-- `zoom` Optional. If a corner is specified, will by default zoom in by 10 times on that corner if unspecified. If you give it a different integer, will use that zoom level instead. If `corner` is unspecified, will do nothing. 
+- Takes `DATA` from FastF1.
+- `starters` is the number of drivers that start the race. I.e. if a driver does not start the race, by default an empty violin plot will be provided. Limiting finishers to 19 will eliminate this empty space.
+- `ylim` the limit on the y axis. Is a tuple, e.g. (200, 320).
+- `include_drs` is a boolean for whether laps which have DRS should be included or not. 
+
+<br>
+
+### `speed_trap_table(data, include_drs=True)`
+Returns a pandas DataFrame. For each driver, you have the average speed they go through the speed trap (in km/h), called AverageSTSpeed, and the number of laps with usable data, called LapCount. 
+
+`include_drs` is a boolean which is True by default. Like `speed_trap_distribution()`, it determines whether laps where a driver achieved DRS down the speed trap straight should be included. If this is set to False, the laps data will be gathered from will be limited. 
+
+<br>
+
+### `custom_scatter(data, drivers_in_graph, x_data, y_data, z_data=None, z_reverse=False, xlim=None, ylim=None, title=True)`
+A custom scatter graph. You can give it any variable in the laps level of data and it will return a Seaborn scatter of them. 
+
+#### Parameters
+- Takes `DATA` from FastF1.
+- `drivers_in_graph` a List of the three-letter acronyms of the drivers in the graph. E.g. ["HAM", "VER", "BOT"].
+- `x_data` the FastF1 variable name for the column on the x axis. Can take custom inputs: described below.
+- `y_data` the FastF1 variable name for the column on the y axis. Can take custom inputs: described below.
+- `z_data` Optional, the FastF1 variable name for the column on the z axis. Can take custom inputs: described below. This takes the form of the dot colour and size for the scatter. Largest values will be largest dots by default.
+- `z_reverse` Optional, False by default. If True, will reverse the dot size/colour scale of the z data, i.e. smallest values will be the largest dots.
+- `xlim` Optional, the limits on the x axis. Takes the form of a Tuple.
+- `ylim` Optional, the limits on the y axis. Takes the form of a Tuple.
+- `title` Optional, True by default. Boolean to determine whether the graph has a title.
+
+#### Custom inputs 
+Certain custom inputs are applicable to this graph. This generally takes the form of a lap average of a certain type of telemetry-level data. The data for these variables are in season_info.json. 
+- ThrottleAvg, average throttle % over each lap.
+- RPMAvg, average RPM over a lap.
+- GearAvg, average gear over a lap.
+
+This list will evolve over time as I add more.
+
+<br>
+
+### `lap_average(laps, variable)`
+This returns a table with an additional row for the custom varaible you want from it. These variables are from a specific list. The custom_scatter() function uses this function if you ask it to plot one of these varaibles. 
+
+Has a dictionary entry from season_info.json for the names. 
+
+#### Custom variables 
+- ThrottleAvg, average throttle % over each lap.
+- RPMAvg, average RPM over a lap.
+- GearAvg, average gear over a lap.
+
+<br>
+
+### `low_speed_corner_analyser(data, low_speed_corners, search_range=150)`
+Finds the average speed for an entire race for each driver through low speed corners and returns two tables. You have to provide a dictionary for which corners these are. 
+
+#### Returns
+Returns TWO tables, `average_min_speeds_per_driver` and `normalised_lowspeed`.
+- `average_min_speeds_per_driver` is the average minimum speed for each corner given, in km/h terms. Also has an average.
+- `normalised_lowspeed` is the previous graph but normalised. The driver with the quickest average minimum speed equals 1, and the rest are arrayed proportionally.
+
+#### Parameters
+- Takes `DATA` from FastF1.
+- `low_speed_corners` is the dictionary of low-speed corners which you have determined. It takes the following form:
+
+	`{"Corner Name": metres_into_track, etc.}`
+
+	where corner_name is a string for the name you wish to give the corner (e.g. Spoon, or Turn 14), and metres_into_track is approximately how far into the circuit it is, as measured by FastF1. 
+
+<br>
+To get the distance into the track each corner is do,
+
+```
+circuit_info = DATA.get_circuit_info()
+corner_location = circuit_info.corners["Distance"]
+print(corner_location)
+```
+while noting that the table will start from 0, so Turn 1 will be on the 0 value and Turn 6 will be on the 5 value. DATA is what is generally labelled "session" in FastF1 docs.
+
+<br>
+
+### `normalised_lowspeed_bar(normalised_lowspeed, all_corners=False, xlim=[0.9, 1])`
+Gives a vertical bar chart for the normalised low corner speeds from the previous function, low_speed_corner_analyser().
+
+- `normalised_lowspeed` is the *second* return data from `low_speed_corner_analyser`.
+- `all_corners` determines whether the data is shown for all corners analysed, or simply the average.
+- `xlim` Optional. The x limits for the graph.
+
+There isn't a reason why other data couldn't be provided to this graph (especially the first return data from low speed corner analyser), but you likely will have to change the x limits.
+
+<br>
+
+### `gap_to_x_gen(laps, relative_driver=None)`
+Generates a DataFrame with a new column showing the gap in seconds to a certain driver, or to the leader, for the start of each lap.
+
+#### Parameters
+- `laps` takes *LAP LEVEL DATA*, unlike most graphs made with this.
+- `relative_driver` Optional. If not provided, will generate the gap to the leader, else if you provide the three-letter acronym of any driver in the race, it will generate the gap to that driver.
+
+<br>
+
+###  `gap_to_x_graph(data, relative_driver=None, drivers_in_graph=[], ylim=None, sc_laps=[])`
+Generates a line graph showing the gap in seconds to a certain driver, or to the leader, for the start of each lap over the course of a race.
+
+#### Parameters
+- Takes `DATA` from FastF1.
+- `relative_driver` Optional. If not provided, will use `gap_to_x_gen()` to generate the gap to the leader for each driver. If a three letter driver acronym is provided, it will generate the gap to that driver instead.
+- `drivers_in_graph` Optional. If not provided, will generate lines for all drivers. If only certain drivers are specified, will do lines for just. 
+- `ylim` Optional, the limits on the y axis. Takes the form of a Tuple.
+- `sc_laps` takes the `sc_laps` list of tuples provided in by the `initial_setup()` variable. For each safety car instance, will provide two vertical yellow lines for the start and end of them, and a "SC" label equa-distant between them.
+
+<br>
+
 
 <br>
 <br>
